@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="鄒陳月桃夫人訃告公告，追思會信息、聯絡方式和致贈花籃選項。">
+    <meta name="keywords" content="鄒陳月桃夫人, 訃告, 追思會, 致贈花籃, 致意">
+    <meta property="og:locale" content="zh_TW">
+    <meta name="author" content="祥安生命">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="鄒陳月桃夫人雲端訃告-祥安">
+    <meta property="og:description" content="追思鄒陳月桃夫人雲端訃告,衷心感謝親友的慰問與陪伴,治喪期間,因時間有限,以電子追思訊息,邀請您一同參與鄒陳月桃夫人的人生畢業典禮">
+    <meta property="og:image" content="https://24hour.xn--kpry57d/ZouChen-Yuetao/image/Write.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://24hour.台灣/ZouChen-Yuetao/">
+    <meta property="og:type" content="website">
+    <title>詹火福先生訃聞公告</title>
+    <link rel="stylesheet" href="obituary.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+</head>
+    
+<audio id="background-music" autoplay loop>
+    <source src="願得一人心.mp4" type="audio/mp4">
+    <source src="願得一人心.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var audio = document.getElementById('background-music');
+    audio.volume = 0;  // 初始化音量為 0
+    audio.muted = true;  // 初始化為靜音，確保自動播放
+
+    // 恢復播放位置與狀態
+    var savedTime = localStorage.getItem('audioCurrentTime');
+    if (savedTime) {
+        audio.currentTime = parseFloat(savedTime);
+    }
+    var isPlaying = localStorage.getItem('audioPlaying') === 'true';
+    if (isPlaying) {
+        audio.play().then(() => audio.muted = true);
+    }
+
+    setInterval(function () {
+        if (!audio.paused) {
+            localStorage.setItem('audioCurrentTime', audio.currentTime);
+        }
+    }, 1000);
+
+    function unmuteAudio() {
+        if (audio.muted) {
+            audio.muted = false;
+            fadeInAudio();
+            document.removeEventListener('click', unmuteAudio);
+            document.removeEventListener('touchstart', unmuteAudio);
+        }
+    }
+
+    document.addEventListener('click', unmuteAudio);
+    document.addEventListener('touchstart', unmuteAudio);
+
+    function fadeInAudio() {
+        let volume = 0;
+        const interval = setInterval(function() {
+            if (volume < 1) {
+                volume += 0.05;
+                audio.volume = volume;
+            } else {
+                clearInterval(interval);
+            }
+        }, 200);
+    }
+
+    audio.addEventListener('play', function () {
+        localStorage.setItem('audioPlaying', 'true');
+    });
+
+    audio.addEventListener('pause', function () {
+        localStorage.setItem('audioPlaying', 'false');
+    });
+});
+</script>
+ 
+    <header>
+        <img src="image/logo.png" alt="Logo" class="logo" loading="lazy">
+        <h1>鄒陳月桃夫人 訃告</h1>
+    </header>
+
+    <main>
+        <!-- 主要照片部分 -->
+        <section class="main-photo-section">
+    <img id="main-photo" src="image/Picture.png" alt="追思照片" loading="lazy">
+    <p id="life-story">
+        <strong>我們摯愛的親人 鄒陳月桃夫人</strong><br>
+        <strong>於民國一一三年十二月廿六日，</strong><br>
+        <strong>下午五時，</strong><br>
+        <strong>安詳地走完86年的人生旅程，</strong><br>
+        <strong>留下我們永恆的追思與感恩。</strong><br><br>
+        <strong>我們將於民國一一四年一月十五日 星期三 </strong><br>
+        <strong>於 台北懷愛館（第二殯儀館） [至善四廳］，</strong><br>
+        <strong>舉辦告別追思奠禮。</strong><br><br>
+        <strong> 敬邀至親好友們蒞臨獻上哀思， </strong><br>
+        <strong> 並向您獻上最深的敬意。 </strong><br><br>
+        <strong> 感謝您的關懷與陪伴，</strong><br>
+        <strong> 家人們銘記在心，衷心感謝。 </strong><br><br>
+
+        <strong> 豎靈地點：新北市立殯儀館 牌位區[61]號  </strong><br>
+        <strong> 豎靈地點：新北市板橋區中正路560號  </strong><br>
+        <strong> 出殯地點：台北市大安區辛亥路三段330號  </strong><br>
+        <strong> 聯絡人  </strong><br>
+        <strong> 水木 0910-183-113 </strong><br>
+    </p>
+</section>
+         <style>
+
+/* 淡入效果 */
+.fade-in-text {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+#life-story {
+    text-align: center;
+    font-size: 18px; /* 可以根据需要调整字体大小 */
+    line-height: 1.8; /* 行间距 */
+    margin: 0 auto;
+    max-width: 800px; /* 控制内容的最大宽度 */
+    padding: 20px; /* 适当增加内边距 */
+    font-family: 'Noto Serif', 'MingLiU', serif; /* 使用優雅的字體 */
+    color: #333; /* 調整文字顏色 */
+    background-color: #f9f9f9; /* 背景顏色讓文字更加突出 */
+    border-radius: 10px; /* 圓角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 加上陰影效果 */
+    letter-spacing: 0.5px; /* 輕微增加字間距，讓文字更通透 */
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    #life-story {
+        font-size: 16px; /* 小屏幕上字体略小 */
+        padding: 15px; /* 减少内边距 */
+    }
+}
+
+@media (max-width: 400px) {
+    #life-story {
+        font-size: 14px; /* 更小屏幕上的字体大小 */
+        padding: 10px; /* 更小的内边距 */
+    }
+}
+
+</style>
+
+        <!-- 訃告紙本部分 -->
+        <section class="paper-obituary-section">
+         <h2><strong>訃告正本</strong></h2>
+            <a href="image/IMG_9686.jpeg" data-lightbox="paper-obituary" data-title="訃聞紙本">
+                <img id="paper-obituary" src="image/IMG_9686.jpeg" alt="訃聞紙本" loading="lazy">
+            </a>
+        </section>
+
+  <!-- 追思與緬懷部分 -->
+<section id="remembrance">
+    <h2><strong>追思緬懷</strong></h2>
+    <div class="remembrance-details">
+        <div class="remembrance-item">
+            <h3><strong> 豎靈地點 </strong></h3>
+            <p><strong> 新北市立殯儀館（板橋殯儀館） </strong></p>
+            <p><strong> 牌位區 </strong>
+            <p><strong> [ 76 ］號 </strong></p>
+            <p><strong><a href="https://maps.app.goo.gl/twuQv8vreX4kki3R8?g_st=com.google.maps.preview.copy">地址：220新北市板橋區中正路560號 </a></strong></p>
+        </div>
+        <div class="remembrance-item">
+            <h3><strong>出殯地點</strong></h3>
+            <p><strong> 台北懷愛館（第二殯儀館）</strong>
+            <p><strong>景行樓3F [ 至仁四廳 ] </strong></p>
+            <p><strong><a href="https://www.google.com/maps/place/106%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E8%BE%9B%E4%BA%A5%E8%B7%AF%E4%B8%89%E6%AE%B5330%E8%99%9F%E5%8F%B0%E5%8C%97%E5%B8%82%E6%87%B7%E6%84%9B%E9%A4%A8/@0,0,22z/data=!4m2!3m1!1s0x3442aa3b0390f463:0x9082f68f52193107" target="_blank">地址：106台北市大安區辛亥路三段330號 </a></strong></p>
+        </div>
+        <div class="remembrance-item">
+            <h3><strong>出殯日期</strong></h3>
+            <p><strong> 2025年01月13日（一）</strong></p>
+        </div>
+        <div class="remembrance-item">
+            <h3><strong>追思奠禮</strong></h3>
+            <p><strong> 上午 八 時 家奠禮 </strong></p>
+            <p><strong> 上午 八 時 三十 分 公奠禮 </strong></p>
+        </div>
+        <div class="remembrance-item">
+            <h3><strong>聯繫電話</strong></h3>
+            <p><strong> 水木<a href="tel:0910-183-113">  0919-183-113 </a></strong></p>
+        </div>
+
+        <!<iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.6055113137354!2d121.55302529999999!3d25.0135172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa3b0390f463%3A0x9082f68f52193107!2z5Y-w5YyX5biC5oe35oSb6aSo!5e0!3m2!1szh-TW!2stw!4v1723546074779!5m2!1szh-TW!2stw"
+        width="100%" 
+        height="350" 
+        frameborder="0" allowfullscreen
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</section>
+
+        <!-- 感謝信息部分 -->
+<section class="remembrance-thanks">
+    <article>
+        <p class="fade-in-text" style="--delay: 0s;"><strong>感謝親友們在這段時間的慰問與關心</strong></p>
+        <p class="fade-in-text" style="--delay: 0.5s;"><strong>您的關懷和鼓勵</strong></p>
+        <p class="fade-in-text" style="--delay: 1s;"><strong>陪伴我們度過了這段艱難的時光</strong></p>
+        <p class="fade-in-text" style="--delay: 1.5s;"><strong>敬邀您</strong></p>
+        <p class="fade-in-text" style="--delay: 2s;"><strong>與我們一同追思懷念 詹火福先生</strong></p>
+        <p class="fade-in-text" style="--delay: 2.5s;"><strong>並向您獻上最深的敬意</strong></p>
+        <p class="fade-in-text" style="--delay: 3s;"><strong>謝謝您！</strong></p>
+    </article>
+</section>
+
+<style>
+/* 基本樣式 */
+.remembrance-thanks {
+    padding: 20px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.remembrance-thanks p {
+    margin: 10px 0;
+    font-size: clamp(16px, 2.5vw, 24px); /* 自適應字體大小 */
+}
+
+/* 淡入效果 */
+.fade-in-text {
+    opacity: 0;
+    transform: translateY(20px); /* 初始稍微向下移動 */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* 滑動進入可視區域後的效果 */
+
+.fade-in-slide {
+    opacity: 0;
+    transform: translateY(20px); /* 初始位置稍微下移 */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-text.visible {
+    opacity: 1;
+    transform: translateY(0); /* 回到原位 */
+}
+
+/* 響應式設計 */
+@media (max-width: 500px) {
+    .remembrance-thanks {
+        padding: 20px;
+    }
+    .remembrance-thanks p {
+        font-size: clamp(16px, 4vw, 20px);
+    }
+}
+</style>
+
+        <script>
+            // Intersection Observer 實現淡入效果
+document.addEventListener("DOMContentLoaded", () => {
+    const fadeInElements = document.querySelectorAll('.fade-in-text');
+
+    // 設置 Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // 加入 visible 類名觸發動畫
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+
+    // 觀察所有文字元素
+    fadeInElements.forEach((el) => observer.observe(el));
+});
+        </script>
+
+<!-- 致贈花籃部分 -->
+<section id="donate-flower">
+    <h3><strong>致贈花籃，送上祝福</strong></h3>
+    <p><strong>選擇致贈花籃樣式，通過LINE與我們聯繫。</strong></p>
+
+    <!-- 訂購按鈕 -->
+    <a href="https://line.me/ti/p/TuM5y_Of6I" target="_blank" class="btn-order"><strong>加入 LINE 訂購</strong></a><br>
+
+    <!-- 顯示花籃樣式按鈕 -->
+    <a href="javascript:void(0);" id="show-flower-baskets" class="btn"><strong>顯示花籃樣式 🌹</strong></a>
+</section>
+
+<!-- 花籃畫廊，默認隱藏 -->
+<div id="flower-basket-gallery" style="display: none;">
+    <div class="flower-basket-item">
+        <a href="image/花籃A.JPG" data-lightbox="flower-baskets" data-title="A款NT$2,500/1對">
+            <img src="image/花籃A.JPG" alt="花籃A" width="300" height="300" loading="lazy">
+        </a>
+        <p class="price"><strong>A款NT$2,500/對</strong></p>
+    </div>
+    <div class="flower-basket-item">
+            <a href="image/花籃B.JPG" data-lightbox="flower-baskets" data-title="B款NT$3,000/1對">
+                <img src="image/花籃B.JPG" alt="花籃B" width="300" height="300" loading="lazy">
+            </a>
+            <p class="price"><strong>B款NT$3,000/對</strong></p>
+        </div>
+        <div class="flower-basket-item">
+            <a href="image/花籃C.JPG" data-lightbox="flower-baskets" data-title="C款NT$3,000/1對 ">
+                <img src="image/花籃C.JPG" alt="花籃C" width="300" height="300" loading="lazy">
+            </a>
+            <p class="price"><strong>C款NT$3,500/對</strong></p>
+        </div>
+        <div class="flower-basket-item">
+            <a href="image/花籃D.JPG" data-lightbox="flower-baskets" data-title="D款NT$3,000/1對" >
+                <img src="image/花籃D.JPG" alt="花籃D" width="300" height="300" loading="lazy">
+            </a>
+            <p class="price"><strong>D款NT$4,000/對</strong></p>
+        </div>
+        <div class="flower-basket-item">
+            <a href="image/花籃E.JPG" data-lightbox="flower-baskets" data-title="E款NT$3,000/1對">
+                <img src="image/花籃E.JPG" alt="花籃E" width="300" height="300" loading="lazy">
+            </a>
+            <p class="price"><strong>E款NT$5,000/對</strong></p>
+        </div>
+        <div class="flower-basket-item">
+            <a href="image/花籃F.JPG" data-lightbox="flower-baskets" data-title="F款NT$3,000/1對">
+                <img src="image/花籃F.JPG" alt="花籃F" width="300" height="300" loading="lazy">
+            </a>
+            <p class="price"><strong>F款NT$5,500/對</strong></p>
+        </div>
+        <div class="flower-basket-item">
+            <a href="image/花籃G.JPG" data-lightbox="flower-baskets" data-title="G款NT$3,000/1對">
+                <img src="image/花籃G.JPG" alt="花籃G" width="300" height="300" loading="lazy">
+            </a>
+            <p class="price"><strong>G款NT$6,000/對</strong></p>
+        </div>
+        <div class="flower-basket-item">
+            <a href="image/花籃H.JPG" data-lightbox="flower-baskets" data-title="H款NT$3,000/1對">
+                <img src="image/花籃H.JPG" alt="花籃H" width="300" height="300" loading="lazy">
+            </a>
+            <p class="price"><strong>H款NT$6,500/對</strong></p>
+        </div>
+        <!-- 依此类推 -->
+    </div>
+
+<script>
+    // 控制显示和隐藏花籃画廊的功能
+    document.getElementById('show-flower-baskets').addEventListener('click', function() {
+        var gallery = document.getElementById('flower-basket-gallery');
+        if (gallery.style.display === 'none' || gallery.style.display === '') {
+            gallery.style.display = 'flex';
+            this.innerHTML = '<strong>隱藏花籃樣式 🌹</strong>';
+        } else {
+            gallery.style.display = 'none';
+                    this.innerHTML = '<strong>顯示花籃樣式 🌹</strong>';
+        }
+    });
+</script>
+
+        <style>
+/* 致贈花籃部分样式 */
+#donate-flower {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 20px;
+    border: 3px solid #005bb5; /* 更深藍色邊框 */
+    border-radius: 12px; /* 更柔和的圓角 */
+    background-color: #e6f2ff; /* 稍深的藍色背景 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 增強陰影效果 */
+}
+
+#donate-flower h3 {
+    font-size: 26px;
+    color: #00274d; /* 深藍色文字 */
+    margin-bottom: 10px;
+}
+
+#donate-flower p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* 按鈕樣式 */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #0077e6; /* 更亮的藍色 */
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 按鈕陰影 */
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #005bb5;
+    transform: translateY(-3px); /* 懸停時輕微上移 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 懸停時增強陰影 */
+}
+
+/* 花籃畫廊 */
+#flower-basket-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.flower-basket-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.flower-basket-item:hover {
+    transform: scale(1.05); /* 懸停時輕微放大 */
+}
+
+.flower-basket-item img {
+    width: 100%;
+    border: 2px solid #ccc; /* 圖片邊框 */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 圖片陰影 */
+    transition: all 0.3s ease;
+}
+
+.flower-basket-item img:hover {
+    border-color: #0077e6; /* 懸停時邊框變為藍色 */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* 懸停時增強陰影 */
+}
+
+.price {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #444;
+}
+    </style>
+
+<!-- 固定聯絡方式 -->
+        <div id="fixed-links">
+            <a href="tel:0938-179-858" class="bold">
+                <img src="image/24小時專線.png" alt="24小時服務電話" style="width: 70px; height: 30px; loading="lazy">
+            </a>
+            <a href="https://line.me/ti/p/TuM5y_Of6I" target="_blank" class="bold">
+                <img src="image/聯繫line.PNG" alt="LINE 聯絡我們" style="width: 50px; height: 50px;" loading="lazy">
+            </a>
+        </div>
+
+        <style>
+  #fixed-links {
+    position: fixed; /* 固定在页面上 */
+    bottom: 10px; /* 距离底部10px */
+    right: 10px; /* 距离右侧10px */
+    display: flex; /* 使用flex布局 */
+    gap: 10px; /* 每个项之间的间距 */
+    align-items: center; /* 垂直居中对齐 */
+    z-index: 1000; /* 确保在页面内容之上 */
+}
+
+#fixed-links a {
+    display: block; /* 链接块级显示 */
+}
+
+#fixed-links img {
+    display: block; /* 图片块级显示 */
+    width: auto; /* 根据实际图片宽高比例调整 */
+    height: auto; /* 根据实际图片宽高比例调整 */
+    max-width: 70px; /* 最大宽度 */
+    max-height: 50px; /* 最大高度 */
+    border: none; /* 去掉图片的边框 */
+    border-radius: 5px; /* 圆角 */
+}
+            </style>
+        
+         
+    
+<!-- 名片及分享按钮部分 -->
+    <section id="business-card">
+            <img src="image/未命名設計.png" alt="名片" class="business-card-img">
+            <div id="share-buttons">
+    <section id="share-buttons">
+        <p><strong>分享此頁面</strong></p>
+        <div class="share-btns">
+            <!-- Facebook 分享按钮 -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://24hour.台灣/Zhan-Huofu/" target="_blank" class="share-btn fb-share-btn" aria-label="Share on Facebook">
+                <img src="image/fb.png" alt="Share on Facebook">
+            </a>
+            <!-- Line 分享按钮 -->
+            <a href="https://line.me/R/msg/text/?https://24hour.台灣/Zhan-Huofu" target="_blank" class="share-btn line-share-btn" aria-label="Share on Line">
+                <img src="image/line.png" alt="Share on Line">
+            </a>
+        </div>
+    </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // 获取当前页面的 URL
+        var currentUrl = window.location.href;
+
+        // 获取当前页面的域名
+        var hostname = window.location.hostname;
+
+        // 检查域名是否是 Punycode 形式（比如：xn--kpry57d）
+        if (hostname.includes("xn--")) {
+            // 替换 Punycode 域名为原始的 .台灣 域名
+            currentUrl = currentUrl.replace(hostname, "24hour.台灣");
+        }
+
+        // 编码 URL，确保特殊字符不会被错误处理
+        var encodedUrl = encodeURIComponent(currentUrl);
+
+        // Facebook 分享链接
+        var fbShareLink = document.querySelector('.fb-share-btn');
+        fbShareLink.href = "https://www.facebook.com/sharer/sharer.php?u=" + encodedUrl;  // 动态添加当前页面 URL
+
+        // Line 分享链接
+        var lineShareLink = document.querySelector('.line-share-btn');
+        lineShareLink.href = "https://line.me/R/msg/text/?" + encodedUrl;  // 编码并添加当前页面 URL
+    });
+</script>
+
+<style>
+/* 名片样式 */
+#business-card {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.business-card-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px; /* 圓角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+}
+
+/* 分享按鈕樣式 */
+#share-buttons {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.share-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.share-btn {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.share-btn img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* 圓形圖標 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 圖標陰影 */
+}
+
+.share-btn:hover {
+    transform: scale(1.1); /* 懸停時放大 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 增強陰影 */
+}
+
+/* 響應式設計 */
+@media (max-width: 500px) {
+    .share-btns {
+        flex-wrap: wrap; /* 小螢幕按鈕換行 */
+    }
+
+    .share-btn {
+        width: 40px; /* 小螢幕縮小按鈕尺寸 */
+        height: 40px;
+    }
+}
+</style>
+                
+
+<div class="transport-info">
+    <h2 class="title">台北市懷愛館（第二殯儀館）</h2>
+    <p class="subtitle">懷恩專車＆停車資訊</p>
+
+    <!-- 圖片展示 -->
+    <div class="image-gallery">
+        <img src="image/交通00004.GIF" alt="S31" class="gallery-img" aria-label="交通指引">
+        <img src="image/交通00005.GIF" alt="S32" class="gallery-img" aria-label="交通指引">
+        <img src="image/交通00003.GIF" alt="S33" class="gallery-img" aria-label="交通指引">
+        <img src="image/交通00002.GIF" alt="S34" class="gallery-img" aria-label="交通指引">
+        <img src="image/交通00001.GIF" alt="S35" class="gallery-img" aria-label="交通指引">
+        <img src="image/交通00007.JPG" alt="搭車資訊" class="gallery-img" aria-label="搭車資訊">
+        <img src="image/交通00008.JPG" alt="交通指引" class="gallery-img" aria-label="交通指引">
+        <img src="image/交通00009.JPG" alt="指引圖" class="gallery-img" aria-label="指引圖">
+        <img src="image/交通00006.JPG" alt="停車資訊" class="gallery-img" aria-label="停車資訊">
+    </div>
+</div>
+
+<style>
+:root {
+    --primary-bg-color: #f9f9f9;
+    --title-color: #333;
+    --subtitle-color: #666;
+    --image-border-radius: 10px;
+    --hover-scale: 1.05;
+    --transition-duration: 0.3s;
+    --box-shadow: rgba(0, 0, 0, 0.1) 0 6px 12px;
+}
+
+/* 整體容器 */
+.transport-info {
+    padding: 20px;
+    background-color: var(--primary-bg-color);
+    border-radius: var(--image-border-radius);
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+/* 標題樣式 */
+.title {
+    font-family: '辰魚落雁體', sans-serif;
+    color: var(--title-color);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* 副標題樣式 */
+.subtitle {
+    font-family: 'Arial', sans-serif;
+    color: var(--subtitle-color);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* 圖片畫廊 */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* 圖片樣式 */
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--image-border-radius);
+    transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+}
+
+/* 懸停效果 */
+.gallery-img:hover {
+    transform: scale(var(--hover-scale));
+    box-shadow: var(--box-shadow);
+}
+
+/* 響應式設計：圖片調整 */
+@media (max-width: 600px) {
+    .gallery-img {
+        width: 90%;
+    }
+}
+</style>
+
+
+<!-- 页脚 -->
+<footer style="background-color: #f3f3f3; padding: 20px 0; text-align: center; font-family: Arial, sans-serif;">
+    <!-- 名片內容 -->
+    <div style="max-width: 400px; margin: 0 auto; background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center; display: flex; align-items: center;">
+        <!-- 負責人圖片 -->
+        <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; margin-right: 20px;">
+            <img src="image/IMG_8349.jpeg" alt="負責人照片" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+        <!-- 文字部分 -->
+        <div style="flex: 1; text-align: left;">
+            <div class="company-logo">
+                <p>祥安生命有限公司</p>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <p style="font-size: 16px; margin: 5px 0;"><strong>承辦人員：陳柏元</strong></p>
+                <p style="font-size: 16px; color: #007BFF; margin: 5px 0;">聯絡電話：0938-179-858</p>
+            </div>
+            <!-- 按鈕區 -->
+            <div style="margin-top: 15px;">
+                <a href="https://line.me/ti/p/TuM5y_Of6I" target="_blank" style="display: inline-block; padding: 10px 20px; margin: 5px; background-color: #25D366; color: white; text-decoration: none; border-radius: 5px;">
+                    生命禮儀、禮俗 免費諮詢
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 版權信息 -->
+    <div class="footer-info">
+        <p class="footer-text"><strong>承辦禮儀公司 祥安生命有限公司 ｜ 禮儀師：陳妍如</strong></p>
+        <p class="footer-text"><strong>© 2024 鄒陳月桃夫人訃告 | <span class="highlight">祥安生命有限公司</span> 版權所有</strong></p>
+    </div>
+</footer>
+
+<style>
+/* 設置自訂字體 - 使用 Google 字體 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+
+/* 公司標誌部分樣式 */
+.company-logo {
+    text-align: left;
+    margin: 0;
+}
+
+.company-logo p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.5em; /* 字體大小 */
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    background: transparent;
+    padding: 3px 0;
+}
+    
+
+/* 引入辰魚落雁體字體 */
+@import url('https://fonts.googleapis.com/css2?family=ChenYu&display=swap');
+
+/* 頁腳版權信息基礎樣式 */
+.footer-info {
+    text-align: center;
+    font-family: 'ChenYu', serif; /* 使用辰魚落雁體 */
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.footer-text {
+    color: #333;
+    font-size: 14px; /* 默認字體大小 */
+    line-height: 1.6;
+    margin: 5px 0;
+    white-space: nowrap;
+}
+
+.footer-text strong {
+    font-weight: bold;
+}
+
+.highlight {
+    color: #555;
+}
+
+/* 響應式設計 - 手機螢幕 */
+@media (max-width: 600px) {
+    .footer-info {
+        padding: 10px;
+    }
+    .footer-text {
+        font-size: 16px; /* 稍微增大字體，避免過大 */
+    }
+}
+</style>        
+              
+</body>
+</html>
