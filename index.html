@@ -232,25 +232,23 @@ document.addEventListener('DOMContentLoaded', function () {
     padding: 20px;
     text-align: center;
     line-height: 1.8;
+    font-size: 16px; /* 統一字體大小 */
 }
 
 .remembrance-thanks p {
-    margin: 10px 0;
-    font-size: clamp(16px, 2.5vw, 24px); /* 自適應字體大小 */
+    margin: 0.5em 0; /* 段落間距 */
+    font-size: 16px; /* 確保一致字體大小 */
+    line-height: 1.6; /* 行高 */
+    word-wrap: break-word; /* 確保長字串自動換行 */
+    word-break: break-word;
+    overflow-wrap: break-word; /* 確保字串不會超出邊界 */
+    white-space: normal; /* 禁止文字單行顯示，允許換行 */
 }
 
 /* 淡入效果 */
 .fade-in-text {
     opacity: 0;
     transform: translateY(20px); /* 初始稍微向下移動 */
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-/* 滑動進入可視區域後的效果 */
-
-.fade-in-slide {
-    opacity: 0;
-    transform: translateY(20px); /* 初始位置稍微下移 */
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
@@ -261,17 +259,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* 響應式設計 */
 @media (max-width: 500px) {
-    .remembrance-thanks {
-        padding: 20px;
-    }
     .remembrance-thanks p {
-        font-size: clamp(16px, 4vw, 20px);
+        font-size: 16px; /* 小螢幕統一字體大小 */
     }
 }
 </style>
 
-        <script>
-            // Intersection Observer 實現淡入效果
+<script>
 document.addEventListener("DOMContentLoaded", () => {
     const fadeInElements = document.querySelectorAll('.fade-in-text');
 
@@ -288,7 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 觀察所有文字元素
     fadeInElements.forEach((el) => observer.observe(el));
 });
-        </script>
+</script>
 
 
 <!-- 固定聯絡方式 -->
